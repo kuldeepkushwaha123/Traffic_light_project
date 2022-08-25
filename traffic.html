@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="traffic.css">
+</head>
+<body>
+    <ul class="nav nav-tabs" style="background-color:yellow;margin-top:5px">
+        <center><li style="margin-left:10px;margin-top:10px auto"><h2><b>
+            Welcome to Traffic-light System</b></h2></li></center>
+    </ul>
+     <div id="traffic_box">
+         <div id="red">
+         </div>
+         <div id="yellow">
+         </div>
+         <div id="green">
+         </div>
+     </div>
+<script>
+   
+
+    function green(){
+        var green = document.getElementById("green");
+        var red = document.getElementById("red");
+        green.style.backgroundColor="#00ff54";
+        green.style.boxShadow="0px 0px 10px #00ff54,0px 0px 20px #00ff54";
+        red.style.backgroundColor="#000"; 
+        red.style.boxShadow="none";
+        setTimeout(yellow,15000)
+
+    }
+    function red(){
+        var red = document.getElementById("red");
+        var yellow = document.getElementById("yellow");
+        red.style.backgroundColor="red";
+        red.style.boxShadow="0px 0px 10px red,0px 0px 30px red";
+        yellow.style.backgroundColor="#000";
+        yellow.style.boxShadow="none";
+        setTimeout(green,5000)
+    }
+    function yellow(){
+        var yellow = document.getElementById("yellow");
+        var green = document.getElementById("green");
+        yellow.style.backgroundColor="yellow";
+        yellow.style.boxShadow="0px 0px 10px yellow,0px 0px 20px yellow"; 
+        green.style.backgroundColor="#000";
+        green.style.boxShadow="none";
+        setTimeout(red,20000)
+    }
+    green();
+
+</script>
+</body>
+</html>
